@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    function m(){
+       
+        document.write("declaring global variable by window object");
+        window.value = 100;//declaring global variable by window object
+    }
+    var valu1 = 20;
+    function n() {
+        alert(window.valu1);
+    alert(window.value);//accessing global variable from other function
+    }
+    m();
+    n();
+    </script>
+</body>
+</html>

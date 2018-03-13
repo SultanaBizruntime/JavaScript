@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let user = { name: "John" };
+
+    // our script uses "id" property
+    user.id = "ID Value";
+
+    // ...if later another script the uses "id" for its purposes...
+
+    user.id = "Their id value"
+    // boom! overwritten! it did not mean to harm the colleague, but did it!
+    </script>
+
+</body>
+</html>

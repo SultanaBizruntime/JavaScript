@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    alert( Symbol.keyFor(Symbol.for("name")) ); // name, global symbol
+
+    alert( Symbol.keyFor(Symbol("name2")) ); // undefined, the argument isn't a global symbol
+    </script>
+
+</body>
+</html>

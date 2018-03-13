@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let obj = {
+      0: "MashaAllah Sulu U Can " // same as "0": "test"
+    };
+
+    // both alerts access the same property (the number 0 is converted to string "0")
+    alert( obj["0"] ); // test
+    alert( obj[0] ); // test (same property)
+    </script>
+
+</body>
+</html>

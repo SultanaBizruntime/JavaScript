@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let id = Symbol("id");
+    let user = {
+      [id]: 123
+    };
+
+    let clone = Object.assign({}, user);
+
+    alert( clone[id] ); // 123
+    </script>
+
+</body>
+</html>

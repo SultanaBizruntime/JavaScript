@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let user = {
+      name: "John",
+      age: 30,
+
+      sayHi() {
+        alert( user.name ); // leads to an error
+      }
+
+    };
+
+
+    let admin = user;
+    user = null; // overwrite to make things obvious
+
+    admin.sayHi(); // Whoops! inside sayHi(), the old name is used! error!
+    </script>
+
+</body>
+</html>

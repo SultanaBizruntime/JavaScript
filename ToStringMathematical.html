@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let obj = {
+      toString() { // toString handles all conversions in the absence of other methods
+        return "2";
+      }
+    };
+
+    alert(obj * 2); // 4, ToPrimitive gives "2", then it becomes 2
+    </script>
+
+</body>
+</html>

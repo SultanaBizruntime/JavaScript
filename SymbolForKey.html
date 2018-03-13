@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let sym = Symbol.for("name");
+    let sym2 = Symbol.for("id");
+
+    // get name from symbol
+    alert( Symbol.keyFor(sym) ); // name
+    alert( Symbol.keyFor(sym2) ); // id
+    </script>
+
+</body>
+</html>

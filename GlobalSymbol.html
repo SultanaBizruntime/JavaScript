@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    // read from the global registry
+    let id = Symbol.for("id"); // if the symbol did not exist, it is created
+
+    // read it again
+    let idAgain = Symbol.for("id");
+
+    // the same symbol
+    alert( id === idAgain ); // true
+    </script>
+
+</body>
+</html>

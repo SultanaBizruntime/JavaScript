@@ -1,0 +1,273 @@
+JavaScript provides 3 places to put the JavaScript code:
+ within body tag, within head tag and external JavaScript file.
+
+
+The script tag specifies that we are using JavaScript.
+
+The text/javascript is the content type that provides information to the browser about the data.
+
+The document.write() function is used to display dynamic content through JavaScript.
+
+3 Places to put JavaScript code
+---------------------------------------------
+Between the body tag of html
+Between the head tag of html
+In .js file (external javaScript)
+
+
+Types of JavaScript Comments
+There are two types of comments in JavaScript.
+
+Single-line Comment
+Multi-line Comment
+
+
+
+JavaScript Variable
+-------------------------------
+A JavaScript variable is simply a name of storage location. There are two types of variables in JavaScript : local variable and global variable.
+
+There are some rules while declaring a JavaScript variable (also known as identifiers).
+
+1. Name must start with a letter (a to z or A to Z), underscore( _ ), or dollar( $ ) sign.
+2. After first letter we can use digits (0 to 9), for example value1.
+3. JavaScript variables are case sensitive, for example x and X are different variables.
+
+
+
+Declaring JavaScript global variable within function
+---------------------------------------------------------------------
+To declare JavaScript global variables inside function, you need to use window object. For example:
+window.value=90; 
+
+Now it can be declared inside any function and can be accessed from any function
+
+
+
+Javascript Data Types
+------------------------------
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+Primitive data type
+Non-primitive (reference) data type
+
+
+
+There are five types of primitive data types in JavaScript. They are as follows:
+
+Data		 Type	Description
+String		represents sequence of characters e.g. "hello"
+Number		represents numeric values e.g. 100
+Boolean		represents boolean value either false or true
+Undefined	represents undefined value
+Null		represents null i.e. no value at all
+
+
+JavaScript non-primitive data types
+---------------------------------------------------
+The non-primitive data types are as follows:
+
+Data Type	Description
+Object	represents instance through which we can access members
+Array	represents group of similar values
+
+
+JavaScript Operators
+----------------------------------
+JavaScript operators are symbols that are used to perform operations on operands.
+
+There are following types of operators in JavaScript.
+
+Arithmetic Operators
+Comparison (Relational) Operators
+Bitwise Operators
+Logical Operators
+Assignment Operators
+Special Operators
+
+
+
+JavaScript Operators
+JavaScript operators are symbols that are used to perform operations on operands. For example:
+
+var sum=10+20;  
+Here, + is the arithmetic operator and = is the assignment operator.
+
+There are following types of operators in JavaScript.
+
+Arithmetic Operators
+Comparison (Relational) Operators
+Bitwise Operators
+Logical Operators
+Assignment Operators
+Special Operators
+
+JavaScript Arithmetic Operators
+--------------------------------------------------
+
+Operator	Description		Example
++	Addition			10+20 = 30
+-	Subtraction		20-10 = 10
+*	Multiplication		10*20 = 200
+/	Division			20/10 = 2
+%	Modulus (Remainder)	20%10 = 0
+++	Increment		var a=10; a++; Now a = 11
+--	Decrement		var a=10; a--; Now a = 9
+
+
+JavaScript Loops
+------------------------
+The JavaScript loops are used to iterate the piece of code using for, while, do while or for-in loops. It makes the code compact. It is mostly used in array.
+
+There are four types of loops in JavaScript.
+
+for loop
+while loop
+do-while loop
+for-in loop
+
+What makes JavaScript unique?
+---------------------------------------------
+There are at least three great things about JavaScript:
+
+Full integration with HTML/CSS.
+Simple things done simply.
+Supported by all major browsers and enabled by default.
+
+
+
+
+Use Strict keyword
+---------------------------
+Ensure that “use strict” is at the top
+Please make sure that "use strict" is on the top of the script, otherwise the strict mode may not be enabled.
+
+There is no strict mode here:
+
+alert("some code");
+// "use strict" below is ignored, must be on the top
+
+"use strict";
+
+// strict mode is not activated
+
+Always “use strict”
+------------------------------
+At this point in time it’s enough to know about it in general:
+
+1. The "use strict" directive switches the engine to the “modern” mode, changing the behavior of some built-in features. We’ll see the details as we study.
+
+2.The strict mode is enabled by "use strict" at the top. Also there are several language features like “classes” and “modules” that enable strict mode automatically.
+
+3.The strict mode is supported by all modern browsers.
+
+4.It’s always recommended to start scripts with "use strict". All examples in this tutorial assume so, unless (very rarely) specified otherwise.
+
+
+Reserved names
+-------------------------------
+There is a list of reserved words, which cannot be used as variable names, because they are used by the language itself.
+
+For example, words let, class, return, function are reserved
+
+
+Summary Variable
+------------------------------------
+We can declare variables to store data. That can be done using var or let or const.
+
+let – is a modern variable declaration. The code must be in strict mode to use let in Chrome (V8).
+var – is an old-school variable declaration. Normally we don’t use it at all, but we’ll cover subtle differences from let in the chapter The old "var", just in case you need them.
+const – is like let, but the value of the variable can’t be changed.
+
+
+String
+---------------
+In JavaScript, there are 3 types of quotes.
+
+Double quotes: "Hello".
+Single quotes: 'Hello'.
+Backticks: `Hello`.
+
+Double and single quotes are “simple” quotes. There’s no difference between them in JavaScript.
+
+Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}, 
+
+
+The typeof operator
+------------------------------
+It supports two forms of syntax:
+
+As an operator: typeof x.
+Function style: typeof(x).
+
+Summary Types
+------------------------------
+There are 7 basic types in JavaScript.
+
+number for numbers of any kind: integer or floating-point.
+string for strings. A string may have one or more characters, there’s no separate single-character type.
+boolean for true/false.
+null for unknown values – a standalone type that has a single value null.
+undefined for unassigned values – a standalone type that has a single value undefined.
+object for more complex data structures.
+symbol for unique identifiers.
+The typeof operator allows us to see which type is stored in the variable.
+
+Two forms: typeof x or typeof(x).
+Returns a string with the name of the type, like "string".
+For null returns "object" – that’s an error in the language, it’s not an object in fact.
+
+ToString
+-------------------
+String conversion happens when we need the string form of a value.
+
+For example, alert(value) does it to show the value.
+
+We can also use a call String(value) function for that:
+
+Summary for alert, confirm, prompt
+---------------------------------------------------
+We covered 3 browser-specific functions to interact with the visitor:
+
+alert
+shows a message.
+
+prompt
+shows a message asking the user to input text. It returns the text or, if CANCEL or Esc is clicked, all browsers return null.
+
+confirm
+shows a message and waits for the user to press “OK” or “CANCEL”. It returns true for OK and false for CANCEL/Esc.
+
+
+Summary Function
+-----------------------------------
+
+1. Functions are values. They can be assigned, copied or declared in any place of the code.
+
+2. If the function is declared as a separate statement in the main code flow, that’s called a “Function Declaration”.
+
+3. If the function is created as a part of an expression, it’s called a “Function Expression”.
+
+4. Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
+
+5. Function Expressions are created when the execution flow reaches them.
+
+Global symbols
+---------------------
+To achieve that, there exists a global symbol registry. We can create symbols in it and access them later,
+ and it guarantees that repeated accesses by the same name return exactly the same symbol.
+
+In order to create or read a symbol in the registry, use Symbol.for(key)
+
+Symbol.keyFor
+----------------------
+For global symbols, not only Symbol.for(key) returns a symbol by name,
+ but there’s a reverse call: Symbol.keyFor(sym), that does the reverse: returns a name by a global symbol.
+
+ToPrimitive and ToString/ToNumber
+-----------------------------------------------------
+The important thing to know about all primitive-conversion methods is that they do not necessarily return the “hinted” primitive.
+
+There is no control whether toString() returns exactly a string, or whether Symbol.toPrimitive method returns a number for a hint “number”.
+
+The only mandatory thing: these methods must return a primitive.
