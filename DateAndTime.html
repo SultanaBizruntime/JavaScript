@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let now = new Date();
+    alert(now); // shows current date/time
+
+    // 0 means 01.01.1970 UTC+0
+    let Jan01_1970 = new Date(0);
+    alert(Jan01_1970);
+
+    // now add 24 hours, get 02.01.1970 UTC+0
+    let Jan02_1970 = new Date(24 * 3600 * 1000);
+    alert(Jan02_1970);
+
+    let date = new Date("2017-01-26");
+    alert(date); // Thu Jan 26 2017 ...
+
+    let date1 = new Date();
+
+    // the hour in your current time zone
+    alert( date1.getHours() );
+
+    // the hour in UTC+0 time zone (London time without daylight savings)
+    alert(date1.getUTCHours());
+
+    alert(new Date().getTimezoneOffset());
+
+    //setting time
+    let today = new Date();
+
+    today.setHours(0);
+    alert(today); // still today, but the hour is changed to 0
+
+    today.setHours(0, 0, 0, 0);
+    alert(today); // still today, now 00:00:00 sharp.
+
+        //Autocorrection
+    let date2 = new Date(2013, 0, 32); // 32 Jan 2013 ?!?
+    alert(date2); // ...is 1st Feb 2013!
+    </script>
+
+</body>
+</html>

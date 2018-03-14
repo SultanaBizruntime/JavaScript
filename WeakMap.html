@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let weakMap = new WeakMap();
+
+    let obj = {};
+
+    weakMap.set(obj, "ok"); // works fine (object key)
+
+    weakMap.set("test", "Whoops"); // Error, because "test" is a primitive
+    
+        //Automatically john1 is removed
+    let john1 = { name: "John" };
+
+    let weakMap1 = new WeakMap();
+    weakMap1.set(john1, "...");
+
+    john1 = null; // overwrite the reference
+
+    // john is removed from memory!
+    
+    
+    </script>
+
+</body>
+</html>

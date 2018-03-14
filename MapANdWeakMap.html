@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let john = { name: "John" };
+
+    // map: user => visits count
+    let visitsCountMap = new Map();
+
+    // john is the key for the map
+    visitsCountMap.set(john, 123);
+
+    // now john leaves us, we don't need him anymore
+    john = null;
+
+    // but it's still in the map, we need to clean it!
+    alert( visitsCountMap.size ); // 1
+    // it's also in the memory, because Map uses it as the key
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    alert( typeof 1 ); // "number"
+
+    alert(typeof new Number(1)); // "object"!
+
+    let zero = new Number(0);
+    
+    if (zero) { // zero is true, because it's an object
+        alert("zero is truthy?!?");
+    }
+
+    //alert(null.test); // error
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    // stringified array
+    let numbers = "[0, 1, 2, 3]";
+
+    numbers = JSON.parse(numbers);
+
+    alert(numbers[1]); // 1
+
+    let user = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+
+    user = JSON.parse(user);
+
+    alert(user.friends[1]); // 1
+    </script>
+
+</body>
+</html>

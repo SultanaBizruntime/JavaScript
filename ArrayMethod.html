@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let arr = ["I", "go", "home"];
+
+    delete arr[1]; // remove "go"
+
+    alert( arr[1] ); // undefined
+
+    // now arr = ["I",  , "home"];
+    alert(arr.length); // 3
+
+        //The arr.splice(str) method is a swiss army knife for arrays. It can do everything: add, remove and insert elements.
+    let arr1 = ["I", "study", "JavaScript", "right", "now"];
+
+    // remove 3 first elements and replace them with another
+    arr1.splice(0, 3, "Let's", "dance");
+
+    alert( arr1 ) // now ["Let's", "dance", "right", "now"]
+
+    let arr2 = ["I", "study", "JavaScript"];
+
+    arr2.splice(1, 1); // from index 1 remove 1 element
+
+    alert(arr2); // ["I", "JavaScript"]
+
+        // we can see that splice returns the array of removed elements:
+    let arr3 = ["I", "study", "JavaScript", "right", "now"];
+
+    // remove 2 first elements
+    let removed = arr3.splice(0, 2);
+
+    alert( removed ); // "I", "study" <-- array of removed elements
+
+        //The splice method is also able to insert the elements without any removals. For that we need to set deleteCount to 0:
+    let arr4 = ["I", "study", "JavaScript"];
+
+    // from index 2
+    // delete 0
+    // then insert "complex" and "language"
+    arr4.splice(2, 0, "complex", "language");
+
+    alert( arr4 ); // "I", "study", "complex", "language", "JavaScript"
+
+        //Concat
+    let arr5 = [1, 2];
+
+    // merge arr with [3,4]
+    alert( arr5.concat([3, 4])); // 1,2,3,4
+
+    // merge arr with [3,4] and [5,6]
+    alert( arr5.concat([3, 4], [5, 6])); // 1,2,3,4,5,6
+
+    // merge arr with [3,4], then add values 5 and 6
+    alert(arr5.concat([3, 4], 5, 6)); // 1,2,3,4,5,6
+
+        //Copies Elements
+    let arr6 = [1, 2];
+
+    let arrayLike = {
+        0: "something",
+        length: 1
+    };
+
+    alert( arr6.concat(arrayLike) ); // 1,2,[object Object]
+        //[1, 2, arrayLike]
+
+        //Transform Array with the use of map().
+    let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length)
+    alert(lengths); // 5,7,6
+
+    let arr7 = [1, 2, 3, 4, 5];
+    arr7.reverse();
+
+    alert(arr7); // 5,4,3,2,1
+
+    let names = 'Bilbo, Gandalf, Nazgul';
+
+    let arr8 = names.split(', ');
+
+    for (let name of arr8) {
+        alert( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+    }
+
+    let arr10 = ['Bilbo', 'Gandalf', 'Nazgul'];
+
+    let str = arr10.join(';');
+
+    alert( str ); // Bilbo;Gandalf;Nazgul
+    </script>
+
+</body>
+</html>

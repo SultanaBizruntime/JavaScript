@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        'use strict';
+
+        //Json stringify
+    let student = {
+      name: 'John',
+      age: 30,
+      isAdmin: false,
+      courses: ['html', 'css', 'js'],
+      wife: null
+    };
+
+    let json = JSON.stringify(student);
+
+    alert(typeof json); // we've got a string!
+
+    alert(json);
+    /* JSON-encoded object:
+    {
+      "name": "John",
+      "age": 30,
+      "isAdmin": false,
+      "courses": ["html", "css", "js"],
+      "wife": null
+    }
+    */
+
+
+    let meetup = {
+        title: "Conference",
+        room: {
+            number: 123,
+            participants: ["john", "ann"]
+        }
+    };
+
+    alert(JSON.stringify(meetup));
+    /* The whole structure is stringified:
+    {
+      "title":"Conference",
+      "room":{"number":23,"participants":["john","ann"]},
+    }
+    */
+    </script>
+
+
+</body>
+</html>

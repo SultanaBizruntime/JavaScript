@@ -271,3 +271,49 @@ The important thing to know about all primitive-conversion methods is that they 
 There is no control whether toString() returns exactly a string, or whether Symbol.toPrimitive method returns a number for a hint “number”.
 
 The only mandatory thing: these methods must return a primitive.
+
+
+
+null/undefined have no methods
+----------------------------------------------
+The special primitives null and undefined are exceptions. 
+They have no corresponding “wrapper objects” and provide no methods. In a sense, they are “the most primitive”.
+
+toString(base)
+----------------------
+The method num.toString(base) returns a string representation of num in the numeral system with the given base.
+
+The base can vary from 2 to 36. By default it’s 10.
+
+Common use cases for this are:
+
+base=16 is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
+
+base=2 is mostly for debugging bitwise operations, digits can be 0 or 1.
+
+base=36 is the maximum, digits can be 0..9 or A..Z. The whole latin alphabet is used to represent a number. A funny, but useful case for 36 is when we need to turn a long numeric identifier into something shorter, for example to make a short url. Can simply represent it in the numeral system with base 36:
+
+
+Property flags
+----------------------
+Object properties, besides a value, have three special attributes (so-called “flags”):
+
+writable – if true, can be changed, otherwise it’s read-only.
+enumerable – if true, then listed in loops, otherwise not listed.
+configurable – if true, the property can be deleted and these attributes can be modified, otherwise not.
+
+Property_Accessor
+-----------------------------
+In Javascript, the standard properties (data member with getter and setter described above) are defined by accessor descriptor (in the link you have in your question). Exclusively, you can use data descriptor (so you can't use i.e. value and set on the same property):
+
+. accessor descriptor = get + set (see the example above)
+. get must be a function; its return value is used in reading the property; if not specified, the default is undefined, which behaves like a function that returns undefined
+. set must be a function; its parameter is filled with RHS in assigning a value to property; if not specified, the default is undefined, which behaves like an empty function
+. data descriptor = value + writable (see the example below)
+. value default undefined; if writable, configurable and enumerable (see below) are true, the property behaves like an ordinary data field
+. writable - default false; if not true, the property is read only; attempt to write is ignored without error*!
+. Both descriptors can have these members:
+
+configurable - default false; if not true, the property can't be deleted; attempt to delete is ignored without error*!
+enumerable - default false; if true, it will be iterated in for(var i in theObject); if false, it will not be iterated, but it is still accessible as public
+

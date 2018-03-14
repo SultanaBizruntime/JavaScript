@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        /*class
+        function Person() {
+            alert('Person instantiated');
+        }*/
+
+        function Person(gender) {
+            this.gender = gender;
+           // alert('Person instantiated');
+        }
+
+        Person.prototype.sayHello = function () {
+            alert('hello');
+        };
+
+        Person.prototype.sayGender = function () {
+            alert(this.gender);
+        };
+
+
+        //object (class Instance)
+        var person1 = new Person();
+        var person2 = new Person();
+
+        //The propert (object Attribute)
+        var person3 = new Person('Male');
+        var person4 = new Person('Female');
+
+        //display the person1 gender
+        alert('person3 is a ' + person3.gender); // person1 is a Male
+    
+        //The methods
+        var person5 = new Person('Male');
+        var person6 = new Person('Female');
+
+        // call the Person sayHello method.
+        person5.sayHello(); // hello
+
+
+
+        var person7 = new Person('Male');
+        var genderTeller = person7.sayGender;
+
+        person7.sayGender(); // alerts 'Male'
+        genderTeller(); // alerts undefined
+        alert(genderTeller === person7.sayGender); // alerts true
+        alert(genderTeller === Person.prototype.sayGender); // alerts true
+        
+
+        genderTeller.call(person7); //alerts 'Male
+    </script>
+
+</body>
+</html>

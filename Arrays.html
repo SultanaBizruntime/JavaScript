@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let fruits = ["Apple", "Orange", "Plum"];
+
+    alert( fruits[0] ); // Apple
+    alert( fruits[1] ); // Orange
+    alert(fruits[2]); // Plum
+
+    fruits[2] = 'Pear'; // now ["Apple", "Orange", "Pear"]
+
+        //add
+    fruits[3] = 'Lemon'; // now ["Apple", "Orange", "Pear", "Lemon"]
+    alert(fruits[3]);
+
+        //total length
+    alert(fruits.length); // 3
+
+    // mix of values
+    let arr = ['Apple', { name: 'John' }, true, function () { alert('hello'); }];
+
+    // get the object at index 1 and then show its name
+    alert(arr[1].name); // John
+
+    // get the function at index 3 and run it
+    arr[3](); // hello
+
+    let fruit1 = ["Apple", "Orange", "Pear"];
+
+    alert( fruit1.pop() ); // remove "Pear" and alert it
+
+    alert(fruit1); // Apple, Orange
+
+        //push
+    let fruit2 = ["Apple", "Orange"];
+
+    fruit2.push("Pear");
+
+    alert(fruit2); // Apple, Orange, Pear
+
+        //shift :Extracts the first element of the array and returns it:
+    let fruit3 = ["Apple", "Orange", "Pear"];
+
+    alert( fruit3.shift() ); // remove Apple and alert it
+
+    alert(fruit3); // Orange, Pear
+
+        //unshift : Add the element to the beginning of the array:
+    let fruit4 = ["Orange", "Pear"];
+
+    fruit4.unshift('Apple');
+
+    alert(fruit4); // Apple, Orange, Pear
+
+        //Methods push and unshift can add multiple elements at once:
+    let fruit5 = ["Apple"];
+
+    fruit5.push("Orange", "Peach");
+    fruit5.unshift("Pineapple", "Lemon");
+
+    // ["Pineapple", "Lemon", "Apple", "Orange", "Peach"]
+    alert(fruit5);
+
+        //Copyied References
+    let fruit6 = ["Banana"]
+
+    let arr1 = fruit6; // copy by reference (two variables reference the same array)
+
+    alert( arr1 === fruit6 ); // true
+
+    arr1.push("Pear"); // modify the array by reference
+
+    alert(fruit6); // Banana, Pear - 2 items now
+
+        // For Loop in array
+    let arr2 = ["Apple", "Orange", "Pear"];
+
+    for (let i = 0; i < arr2.length; i++) {
+        alert( arr[i] );
+    }
+
+        //For each Loop
+    let fruit7 = ["Apple", "Orange", "Plum"];
+
+    // iterates over array elements
+    for (let fruit of fruit7) {
+        alert( fruit );
+    }
+
+    </script>
+
+</body>
+</html>

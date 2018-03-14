@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let guestList = `Guests:
+     * John
+     * Pete
+     * Mary
+    `;
+
+    alert(guestList); // a list of guests, multiple lines
+
+        /*
+            Special characters
+            -------------------
+            It is still possible to create multiline strings with single quotes by using a so-called “newline character”,
+            written as \n, which denotes a line break:
+        */
+    let guestList1 = "Guests:\n * John\n * Pete\n * Mary";
+
+    alert(guestList1); // a multiline list of guests
+
+    alert("Hello\nWorld"); // two lines using a "newline symbol"
+
+    // two lines using a normal newline and backticks
+    alert(`Hello
+    World` );
+
+    alert('I\'m the Walrus!'); // I'm the Walrus!
+
+    alert(`I'm the Walrus!`); // I'm the Walrus!
+
+    alert(`The backslash: \\`); // The backslash: \
+
+    alert(`My\n`.length); // 3
+
+    let str = `Hello`;
+
+    // the first character
+    alert(str[0]); // H
+    alert(str.charAt(0)); // H
+
+    // the last character
+    alert(str[str.length - 1]); // o
+
+    let str1 = `Hello`;
+
+    alert( str1[1000] ); // undefined
+    alert(str1.charAt(1000)); // '' (an empty string)
+
+    for (let char of "Hello") {
+        alert(char); // H,e,l,l,o (char becomes "H", then "e", then "l" etc)
+    }
+
+        //Strings are immutable
+    let str2 = 'Hi';
+
+    str2[0] = 'h'; // error
+    alert(str2[0]); // doesn't work
+
+    let str3 = 'Hi';
+
+    str3 = 'h' + str3[1];  // replace the string
+
+    alert(str3); // hi
+
+    alert('Interface'.toUpperCase()); // INTERFACE
+    alert('Interface'.toLowerCase()); // interface
+
+    alert('Interface'[0].toLowerCase()); // 'i'
+
+        /*
+            str.indexOf
+        */
+    let str4 = 'Widget with id';
+
+    alert( str4.indexOf('Widget') ); // 0, because 'Widget' is found at the beginning
+    alert( str4.indexOf('widget') ); // -1, not found, the search is case-sensitive
+
+    alert(str4.indexOf("id")); // 1, "id" is found at the position 1 (..idget with id)
+
+    let str5 = 'Widget with id';
+
+    alert(str5.indexOf('id', 2)) // 12
+
+        /*
+            There is a slight inconvenience with indexOf in the if test. We can’t put it in the if like this:
+        */
+    let str6 = "Widget with id";
+
+    if (str6.indexOf("Widget")) {
+        alert("We found it"); // doesn't work!
+    }
+
+        // we should actually check for -1, like this:
+    let str7 = "Widget with id";
+
+    if (str7.indexOf("Widget") != -1) {
+        alert("We found it"); // works now!
+    }
+
+        //The bitwise NOT trick
+    alert(~2); // -3, the same as -(2+1)
+    alert(~1); // -2, the same as -(1+1)
+    alert(~0); // -1, the same as -(0+1)
+    alert(~-1); // 0, the same as -(-1+1)
+
+        // we can see, ~n is zero only if n == -1.
+    let str8 = "Widget";
+
+    if (~str8.indexOf("Widget")) {
+        alert( 'Found it!' ); // works
+    }
+
+        /*
+            includes, startsWith, endsWith
+            --------------------------------
+            The more modern method str.includes(substr, pos) returns true/false
+            depending on whether str contains substr within.
+
+        */
+    alert("Widget with id".includes("Widget")); // true
+
+    alert("Hello".includes("Bye")); // false
+
+    alert( "Midget".includes("id") ); // true
+    alert( "Midget".includes("id", 3) ); // false, from position 3 there is no "id"
+    
+    alert("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
+    alert("Widget".endsWith("get"));   // true, "Widget" ends with "get"
+
+        //Getting a substring
+    let str9 = "stringify";
+    alert( str9.slice(0, 5) ); // 'strin', the substring from 0 to 5 (not including 5)
+    alert( str9.slice(0, 1) ); // 's', from 0 to 1, but not including 1, so only character at 0
+    
+    let str10 = "stringify";
+    alert( str10.slice(2) ); // ringify, from the 2nd position till the end
+    
+    let str11 = "stringify";
+
+    // these are same for substring
+    alert( str11.substring(2, 6) ); // "ring"
+    alert( str11.substring(6, 2) ); // "ring"
+
+    // ...but not for slice:
+    alert( str11.slice(2, 6) ); // "ring" (the same)
+    alert(str11.slice(6, 2)); // "" (an empty string)
+
+        //The first argument may be negative, to count from the end:
+    let str12 = "stringify";
+    alert( str12.substr(-4, 2) ); // gi, from the 4th position get 2 characters
+
+        //A lowercase letter is always greater than the uppercase:
+    alert('a' > 'Z'); // true
+
+        //str.codePointAt(pos)
+
+    // different case letters have different codes
+    alert("z".codePointAt(0)); // 122
+    alert("Z".codePointAt(0)); // 90
+
+     </script>
+    
+</body>
+</html>

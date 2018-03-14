@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let set = new Set(["oranges", "apples", "bananas"]);
+
+    for (let value of set) alert(value);
+
+    // the same with forEach:
+    set.forEach((value, valueAgain, set) => {
+      alert(value);
+    });
+        /*
+            Note the funny thing. The forEach function in the Set has 3 arguments: a value,
+            then again a value, and then the target object. Indeed, the same value appears in the arguments twice.
+        */
+    </script>
+
+</body>
+</html>

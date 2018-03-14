@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        'use strict';
+        //Add custom to tag
+    let room = {
+      number: 23,
+      toJSON() {
+        return this.number;
+      }
+    };
+
+    let meetup = {
+      title: "Conference",
+      room
+    };
+
+    alert( JSON.stringify(room) ); // 23
+
+    alert( JSON.stringify(meetup) );
+    /*
+      {
+        "title":"Conference",
+        "room": 23
+      }
+    */
+    </script>
+
+</body>
+</html>

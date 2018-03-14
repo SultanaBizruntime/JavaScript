@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let user = {
+      name: "John",
+      age: 30
+    };
+
+    // loop over values
+    for (let value of Object.values(user)) {
+      alert(value); // John, then 30
+    }
+
+        //loop over key , value
+    for (let value of Object.entries(user)) {
+        alert(value); // name,John then age,30
+    }
+    </script>
+
+</body>
+</html>

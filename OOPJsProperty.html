@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let user = {
+      name: "John"
+    };
+
+    let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+
+    alert( JSON.stringify(descriptor, null, 2 ) );
+    /* property descriptor:
+    {
+      "value": "John",
+      "writable": true,
+      "enumerable": true,
+      "configurable": true
+    }
+    */
+    </script>
+
+</body>
+</html>

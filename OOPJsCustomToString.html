@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let user = {
+      name: "John",
+      toString() {
+        return this.name;
+      }
+    };
+
+    // By default, both our properties are listed:
+    for (let key in user) alert(key); // name, toString
+    </script>
+
+</body>
+</html>

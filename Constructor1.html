@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    function User(name) {
+      if (!new target) { // if you run me without new
+        return new User(name); // ...I will add new for you
+      }
+
+      this.name = name;
+    }
+
+    let john = User("John"); // redirects call to new User
+    alert(john.name); // John
+    </script>
+
+</body>
+</html>

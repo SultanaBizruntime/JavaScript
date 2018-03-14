@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+    'use strict';
+    let arrayLike = {
+      0: "Hello",
+      1: "World",
+      length: 2
+    };
+
+    let arr = Array.from(arrayLike); // (*)
+    alert(arr.pop()); // World (method works)
+    alert(arr);
+    </script>
+
+</body>
+</html>
